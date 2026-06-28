@@ -1,0 +1,6 @@
+baseURL = 'https://williamariton.com/'
+locale = 'en-us'
+title = 'William Ariton Blog'
+
+[markup.goldmark.renderer]
+unsafe = true

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body> <!-- ONLY OPEN BODY HERE -->
+
+    <header>
+        <a href="/">
+            <img src="/images/Will Play Logo 800x250.png" alt="Channel Archive Logo" class="wii-logo">
+        </a>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <script>
+        document.querySelectorAll('.wii-gallery').forEach(gallery => {
+            const track = gallery.querySelector('.gallery-track');
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const nextBtn = gallery.querySelector('.gallery-btn.next');
+            const prevBtn = gallery.querySelector('.gallery-btn.prev');
+            
+            let currentIndex = 0;
+            const maxIndex = slides.length - 1;
+
+            function updateGallery() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+                updateGallery();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+                updateGallery();
+            });
+        });
+    </script>
+</body> <!-- CLOSE BODY HERE -->
+</html>

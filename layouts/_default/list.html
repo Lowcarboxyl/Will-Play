@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="timeline-scroll-container">
+    
+    <div class="center-spine"></div>
+
+    <div class="timeline-events">
+        {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
+        <div class="timeline-year-block">
+            
+            <div class="spine-node">
+                <span class="node-year">{{ .Key }}</span>
+            </div>
+
+            <div class="cards-cluster">
+                {{ range .Pages }}
+                <div class="cluster-item">
+                    <a href="{{ .Permalink }}" class="wii-card">
+                        <div class="date-tag">{{ .Date.Format "Jan 2" }}</div>
+                        <div class="wii-card-body">
+                            <div class="icon">{{ .Params.icon | default "📝" }}</div>
+                            <div class="label">{{ .Title }}</div>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+
+        </div>
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}

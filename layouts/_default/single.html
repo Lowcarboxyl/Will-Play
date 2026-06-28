@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="post-content">
+    <header class="post-header">
+        <div class="post-icon">{{ .Params.icon | default "📝" }}</div>
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+    </header>
+    
+    <hr class="wii-divider">
+
+    <section class="body-text">
+        {{ .Content }}
+    </section>
+    
+    <footer class="post-footer">
+        <a href="/" class="wii-button">Back to Timeline</a>
+    </footer>
+</article>
+{{ end }}

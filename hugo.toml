@@ -1,6 +1,10 @@
-baseURL = 'https://williamariton.com/'
+baseURL = 'https://lowcarboxyl.github.io/Will-Play/'
 locale = 'en-us'
 title = 'William Ariton Blog'
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[ Roland ]  # Just adding a comment context
+canonifyURLs = true
+relativeURLs = true

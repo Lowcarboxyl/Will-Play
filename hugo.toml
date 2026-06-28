@@ -8,3 +8,8 @@ unsafe = true
 [ Roland ]  # Just adding a comment context
 canonifyURLs = false
 relativeURLs = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

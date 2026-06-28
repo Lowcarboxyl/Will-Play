@@ -6,5 +6,5 @@ title = 'William Ariton Blog'
 unsafe = true
 
 [ Roland ]  # Just adding a comment context
-canonifyURLs = true
+canonifyURLs = false
 relativeURLs = true

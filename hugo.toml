@@ -2,9 +2,6 @@ baseURL = 'https://lowcarboxyl.github.io/Will-Play/'
 locale = 'en-us'
 title = 'William Ariton Blog'
 
-[markup.goldmark.renderer]
-unsafe = true
-
 [ Roland ]  # Just adding a comment context
 canonifyURLs = false
 relativeURLs = true

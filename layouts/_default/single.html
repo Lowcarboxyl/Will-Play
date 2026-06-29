@@ -20,4 +20,34 @@
         </div>
     </footer>
 </article>
+
+<div id="image-lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+</div>
+
+<script>
+  // Wait for the page to load
+  document.addEventListener("DOMContentLoaded", function() {
+    // Find all images inside your article content container
+    const images = document.querySelectorAll("article img, .gallery-slide img, .image-wrapper img");
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+      // Add a pointer cursor so users know they can click it
+      img.style.cursor = "zoom-in";
+      
+      img.addEventListener("click", function() {
+        lightbox.style.display = "flex";
+        lightboxImg.src = this.src;
+      });
+    });
+  });
+
+  // Function to close the box when clicking anywhere
+  function closeLightbox() {
+    document.getElementById("image-lightbox").style.display = "none";
+  }
+</script>
 {{ end }}

@@ -473,3 +473,31 @@ header h1 {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  /* 1. Change the grid from 2 columns (left/right) to 1 column */
+  .timeline-row {
+    grid-template-columns: 1fr !important;
+    text-align: left !important;
+  }
+
+  /* 2. Push the central timeline line to the left edge */
+  .timeline-track {
+    left: 20px !important;
+    transform: none !important;
+  }
+
+  /* 3. Force all cards to sit on the right side of the line */
+  .wii-card {
+    grid-column: 1 !important;
+    margin-left: 40px !important;
+    width: calc(100% - 60px) !important;
+  }
+
+  /* 4. Adjust the year node to sit neatly on the left track */
+  .timeline-node {
+    left: 20px !important;
+    transform: translateX(-50%) !important;
+  }
+}

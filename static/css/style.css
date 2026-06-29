@@ -260,7 +260,7 @@ header h1 {
 
 /* The viewport window that hides off-screen images */
 .gallery-viewport {
-    /*overflow: hidden;*/
+    overflow: hidden;
     width: 100%;
     border-radius: 20px;
     background: #fff;

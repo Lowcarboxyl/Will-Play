@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="/>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
-<body> <!-- ONLY OPEN BODY HERE -->
+<body>
 
     <header>
-        <a href="{{ relURL "css/style.css" }}">
+        <a href="{{ site.BaseURL }}">
             <img src="https://lowcarboxyl.github.io/Will-Play/images/Will Play Logo 800x250.png" alt="Channel Archive Logo" class="wii-logo">
         </a>
     </header>
@@ -43,5 +43,5 @@
             });
         });
     </script>
-</body> <!-- CLOSE BODY HERE -->
+</body>
 </html>

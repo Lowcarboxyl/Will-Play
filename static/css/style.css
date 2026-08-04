@@ -480,3 +480,82 @@ header h1 {
   overflow-x: auto !important;
   white-space: nowrap !important;
 }
+
+/* Wii-Style Expandable Transcript Box */
+details.wii-transcript {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+summary.wii-transcript-btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: #f0f4f8;
+  color: #333;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  user-select: none;
+  list-style: none; /* Removes default disclosure triangle */
+}
+
+summary.wii-transcript-btn::-webkit-details-marker {
+  display: none; /* Removes Safari/Chrome marker */
+}
+
+summary.wii-transcript-btn:hover {
+  background: #e1e9f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+details.wii-transcript[open] summary.wii-transcript-btn {
+  background: #d4e2ed;
+  margin-bottom: 0.8rem;
+}
+
+.transcript-content {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.transcript-content p {
+  margin-bottom: 0.8rem;
+}
+
+.transcript-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Standalone Video Wrapper */
+.video-container-wrapper {
+  max-width: 594px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+/* Ensure Transcript Box Inherits Full Width Inside Wrapper */
+details.wii-transcript {
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.transcript-content {
+  text-align: left;
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  box-sizing: border-box;
+}

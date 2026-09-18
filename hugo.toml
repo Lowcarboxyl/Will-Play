@@ -10,3 +10,5 @@ relativeURLs = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+buildFuture = true
